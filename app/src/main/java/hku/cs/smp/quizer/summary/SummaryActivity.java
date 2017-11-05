@@ -34,7 +34,7 @@ public class SummaryActivity extends AppCompatActivity {
         Long durationForQuadratic = 0L;
         int quadraticCorrect = 0;
         int quadraticWrong = 0;
-        int quadraticGiveup = 0;
+        int quadraticGiveUp = 0;
 
         for (Question question : questions) {
             if (question instanceof LinearQuestion) {
@@ -49,7 +49,7 @@ public class SummaryActivity extends AppCompatActivity {
                 }
             } else if (question instanceof QuadraticQuestion) {
                 if (question.isGiveUp()) {
-                    quadraticGiveup += 1;
+                    quadraticGiveUp += 1;
                 } else {
                     durationForQuadratic += question.getDuration();
                     if (question.isCorrect())
@@ -81,7 +81,7 @@ public class SummaryActivity extends AppCompatActivity {
                         "%s(Correct:%d, Wrong:%d, Give up:%d)",
                 duration,
                 linearTimeText, linearCorrect, linearWrong, linearGiveUp,
-                quadraticTimeText, quadraticCorrect, quadraticWrong, quadraticGiveup));
+                quadraticTimeText, quadraticCorrect, quadraticWrong, quadraticGiveUp));
         list.setAdapter(summaryAdapter);
     }
 }
