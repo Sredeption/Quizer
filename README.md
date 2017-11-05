@@ -1,4 +1,6 @@
 # 0.Setup
+You can found this project in [GitHub](https://github.com/Sredeption/Quizer)
+
 The project is configured to API level 24.
 * compileSdkVersion=24
 * buildToolsVersion=24.0.0
