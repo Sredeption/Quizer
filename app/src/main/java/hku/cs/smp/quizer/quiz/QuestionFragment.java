@@ -40,7 +40,7 @@ public class QuestionFragment extends Fragment {
         if (quizView != null)
             return quizView;
         quizView = (ViewGroup) inflater.inflate(R.layout.fragment_quiz, container, false);
-        TextView questionView = quizView.findViewById(R.id.question_view);
+        TextView questionView = (TextView) quizView.findViewById(R.id.question_view);
         questionView.setText(question.getQuestion());
         System.out.println(question.getQuestion());
         for (Double a : question.getCorrectAnswers()) {
@@ -49,20 +49,20 @@ public class QuestionFragment extends Fragment {
 
         if (question.isSingleRoot()) {
             TextInputLayout xBox = (TextInputLayout) inflater.inflate(R.layout.answer_box, quizView, false);
-            EditText xEditBox = xBox.findViewById(R.id.answer);
+            EditText xEditBox = (EditText) xBox.findViewById(R.id.answer);
             xBox.setHint(getResources().getString(R.string.prompt_x));
             editTexts.add(xEditBox);
             quizView.addView(xBox);
         } else {
 
             TextInputLayout x1Box = (TextInputLayout) inflater.inflate(R.layout.answer_box, quizView, false);
-            EditText x1EditBox = x1Box.findViewById(R.id.answer);
+            EditText x1EditBox = (EditText) x1Box.findViewById(R.id.answer);
             x1Box.setHint(getResources().getString(R.string.prompt_x1));
             quizView.addView(x1Box);
             editTexts.add(x1EditBox);
 
             TextInputLayout x2Box = (TextInputLayout) inflater.inflate(R.layout.answer_box, quizView, false);
-            EditText x2EditBox = x2Box.findViewById(R.id.answer);
+            EditText x2EditBox = (EditText) x2Box.findViewById(R.id.answer);
             x2Box.setHint(getResources().getString(R.string.prompt_x2));
             quizView.addView(x2Box);
             editTexts.add(x2EditBox);
@@ -146,7 +146,7 @@ public class QuestionFragment extends Fragment {
             return;
         }
         LinearLayout answerLayout = (LinearLayout) LayoutInflater.from(getContext()).inflate(R.layout.correct_answer, quizView, false);
-        TextView correctAnswer = answerLayout.findViewById(R.id.correct_answer);
+        TextView correctAnswer = (TextView) answerLayout.findViewById(R.id.correct_answer);
         StringBuilder res = new StringBuilder();
         List<Double> list = question.getCorrectAnswers();
         NumberFormat format = NumberFormat.getNumberInstance();

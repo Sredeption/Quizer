@@ -77,9 +77,9 @@ public class SummaryAdapter extends RecyclerView.Adapter<SummaryAdapter.ViewHold
         public ViewHolder(View itemView) {
             super(itemView);
             this.view = itemView;
-            this.formula = view.findViewById(R.id.formula);
-            this.answer = view.findViewById(R.id.answer);
-            this.correct = view.findViewById(R.id.correct);
+            this.formula = (TextView) view.findViewById(R.id.formula);
+            this.answer = (TextView) view.findViewById(R.id.answer);
+            this.correct = (TextView) view.findViewById(R.id.correct);
         }
     }
 }

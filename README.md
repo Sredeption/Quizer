@@ -1,3 +1,10 @@
+# 0.Setup
+The project is configured to API level 24.
+* compileSdkVersion=24
+* buildToolsVersion=24.0.0
+* minSdkVersion=21
+* targetSdkVersion=24
+
 # 1.Start Quiz
 <div align=center>
     <img src="img/start_quiz.jpg" width="300px" />
@@ -104,7 +111,7 @@ the app would switch to that page automatically and prompt a remind message.
     <img src="img/remind.jpg" width="300px" />
 </div>
 
-# Summary
+# 9.Summary
 The summary page require the app to count time spent on each question. However,
 it's a little bit quirky in my implementation, because **Quizer** allows user
 to pass the question and answer it later. In order to counter this problem, I
